@@ -1,4 +1,4 @@
-name: Run Semgrep CLI
+name: Security Tests
 
 on:
   push:
@@ -26,4 +26,4 @@ jobs:
       - name: Run Semgrep
         env:
           SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
-        run: semgrep ci
+        run: semgrep ci --timeout-threshold 60
