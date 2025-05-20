@@ -25,5 +25,5 @@ jobs:
 
       - name: Run Semgrep
         env:
-          SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_TOKEN }}
-        run: semgrep scan --config auto --publish-token "$SEMGREP_APP_TOKEN" --publish .
+          SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
+        run: semgrep ci
